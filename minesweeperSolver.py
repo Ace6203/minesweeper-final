@@ -120,6 +120,7 @@ def play_minesweeper(width=7, height=11, num_mines=8):
         turn += 1
         print(f"🔁 Turn {turn}")
         flags, safe = solve_visible_board(visible)
+        print_board(visible)
 
         # Ai assisted on lines 125-133 in showing how to keep track of how many cells are revealed and if the game is solved
         before_revealed = sum(cell != -1 for row in visible for cell in row)
